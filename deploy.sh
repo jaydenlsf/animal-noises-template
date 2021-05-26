@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Stop all running containers
+docker rm -f $(docker ps -qa)
+
 project_name=animal_noises
 
 # Build server

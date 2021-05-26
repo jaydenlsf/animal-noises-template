@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    server:
+        container_name: animal_noises_server
+        image: server:latest
+        build: ./server
+        ports:
+        -   target: 80
+            protocol: tcp
+    animal_api:
+        container_name: animal_noises_api
+        image: animal_api:latest
+        build: ./animal_api
+    
